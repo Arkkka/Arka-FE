@@ -1,0 +1,11 @@
+export { default as athletesTrainingIllustration } from './athletes-training.svg';
+export { default as contactUsIllustration } from './contact-us.svg';
+export { default as faqIllustration } from './faq.svg';
+export { default as feelingHappyIllustration } from './feeling-happy.svg';
+export { default as heroMorningWorkoutIllustration } from './hero-morning-workout.svg';
+export { default as mindfulnessIllustration } from './mindfulness.svg';
+export { default as remindersIllustration } from './reminders.svg';
+export { default as retroVideoGameIllustration } from './retro-video-game.svg';
+export { default as roadToKnowledgeIllustration } from './road-to-knowledge.svg';
+export { default as shareResultsIllustration } from './share-results.svg';
+export { default as workingTogetherIllustration } from './working-together.svg';
