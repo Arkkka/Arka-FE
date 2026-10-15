@@ -352,7 +352,7 @@ export function LandingContent({
                     className="flex items-center gap-4 rounded-2xl border-2 border-divider bg-white p-4 text-xl font-black shadow-[0_4px_0_#b7c8d8]"
                     key={step}
                   >
-                    <span className="flex size-12 shrink-0 items-center justify-center rounded-xl bg-brand">
+                    <span className="flex size-12 shrink-0 items-center justify-center rounded-xl bg-brand text-white">
                       {index + 1}
                     </span>
                     {step}
