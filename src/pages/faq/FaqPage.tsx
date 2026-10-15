@@ -1,4 +1,5 @@
-import { m, useReducedMotion } from 'framer-motion';
+import { AnimatePresence, m, useReducedMotion } from 'framer-motion';
+import { useId, useState } from 'react';
 import { ChevronDown } from 'lucide-react';
 import { searchReference } from '@/assets/index.ts';
 
@@ -40,6 +41,60 @@ const QUESTIONS = [
   },
 ] as const;
 
+function FaqItem({ answer, index, question }: { answer: string; index: number; question: string }) {
+  const [open, setOpen] = useState(false);
+  const reduceMotion = useReducedMotion();
+  const answerId = useId();
+  const buttonId = useId();
+  const initial = reduceMotion ? { opacity: 1 } : { opacity: 0, y: 20 };
+  const panelTransition = reduceMotion
+    ? { duration: 0 }
+    : { duration: 0.28, ease: [0.16, 1, 0.3, 1] as const };
+
+  return (
+    <m.div
+      animate={{ opacity: 1, y: 0 }}
+      className="overflow-hidden rounded-md border-2 border-divider bg-white shadow-[0_4px_0_#b7c8d8]"
+      initial={initial}
+      transition={{ delay: reduceMotion ? 0 : index * 0.05, duration: 0.35 }}
+      viewport={{ once: true, amount: 0.2 }}
+      whileInView={{ opacity: 1, y: 0 }}
+    >
+      <h3 className="m-0">
+        <button
+          aria-controls={answerId}
+          aria-expanded={open}
+          className="group flex min-h-16 w-full items-center justify-between gap-4 px-5 py-4 text-left text-lg font-black text-ink focus-visible:outline-4 focus-visible:outline-offset-2 focus-visible:outline-brand-ink"
+          id={buttonId}
+          onClick={() => setOpen((current) => !current)}
+          type="button"
+        >
+          <span>{question}</span>
+          <m.span animate={{ rotate: open ? 180 : 0 }} transition={panelTransition}>
+            <ChevronDown aria-hidden className="size-6 shrink-0" />
+          </m.span>
+        </button>
+      </h3>
+      <AnimatePresence initial={false}>
+        {open && (
+          <m.div
+            animate={{ height: 'auto', opacity: 1 }}
+            aria-labelledby={buttonId}
+            className="overflow-hidden border-t-2 border-divider"
+            exit={{ height: 0, opacity: 0 }}
+            id={answerId}
+            initial={{ height: 0, opacity: 0 }}
+            role="region"
+            transition={panelTransition}
+          >
+            <p className="m-0 px-5 py-5 text-lg leading-8 text-muted">{answer}</p>
+          </m.div>
+        )}
+      </AnimatePresence>
+    </m.div>
+  );
+}
+
 export function FaqPage() {
   const reduceMotion = useReducedMotion();
   const initial = reduceMotion ? { opacity: 1 } : { opacity: 0, y: 20 };
@@ -80,27 +135,7 @@ export function FaqPage() {
             Pertanyaan yang sering diajukan
           </m.h2>
           <div className="mt-8 grid gap-4">
-            {QUESTIONS.map(({ answer, question }, index) => (
-              <m.details
-                className="group rounded-md border-2 border-divider bg-white shadow-[0_4px_0_#b7c8d8]"
-                initial={initial}
-                key={question}
-                transition={{ delay: reduceMotion ? 0 : index * 0.05, duration: 0.35 }}
-                viewport={{ once: true, amount: 0.2 }}
-                whileInView={{ opacity: 1, y: 0 }}
-              >
-                <summary className="flex min-h-16 cursor-pointer list-none items-center justify-between gap-4 px-5 py-4 text-lg font-black text-ink focus-visible:outline-4 focus-visible:outline-offset-2 focus-visible:outline-brand-ink">
-                  {question}
-                  <ChevronDown
-                    aria-hidden
-                    className="size-6 shrink-0 transition-transform group-open:rotate-180 motion-reduce:transition-none"
-                  />
-                </summary>
-                <p className="m-0 border-t-2 border-divider px-5 py-5 text-lg leading-8 text-muted">
-                  {answer}
-                </p>
-              </m.details>
-            ))}
+            {QUESTIONS.map(({ answer, question }, index) => <FaqItem answer={answer} index={index} key={question} question={question} />)}
           </div>
         </div>
       </section>
