@@ -1,6 +1,6 @@
 import { m, useReducedMotion } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
-import { faqIllustration } from '@/assets/index.ts';
+import { searchReference } from '@/assets/index.ts';
 
 const QUESTIONS = [
   {
@@ -59,11 +59,11 @@ export function FaqPage() {
             </p>
           </m.div>
           <m.img
-            alt="Seseorang melihat daftar pertanyaan dan jawaban"
+            alt="Koala mencari jawaban dengan kaca pembesar"
             animate={{ opacity: 1, y: 0 }}
             className="mx-auto max-h-[24rem] w-full object-contain"
             initial={initial}
-            src={faqIllustration}
+            src={searchReference}
             transition={{ delay: reduceMotion ? 0 : 0.1, duration: 0.45 }}
           />
         </div>

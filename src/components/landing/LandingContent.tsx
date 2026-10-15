@@ -6,20 +6,20 @@ import { ArrowRight } from 'lucide-react';
 import { useRef } from 'react';
 import { Link } from 'react-router-dom';
 import {
+  catetReference,
   clipboardEmoji,
   dingDongReference,
   eyesEmoji,
-  feelingHappyIllustration,
   heartHandsEmoji,
-  heroMorningWorkoutIllustration,
+  lompatReference,
   musicalNotesEmoji,
-  remindersIllustration,
+  papanReference,
+  searchReference,
   satelliteAntennaEmoji,
-  shareResultsIllustration,
+  stretchingReference,
   tangerineEmoji,
   goNoGoReference,
   perasJerukReference,
-  workingTogetherIllustration,
 } from '@/assets/index.ts';
 import { ROUTES } from '@/constants/routes.ts';
 import { MarketingFooter, MarketingHeader } from '@/components/marketing-shell';
@@ -69,17 +69,17 @@ const GAMES = [
 
 const SESSION_SUPPORT = [
   {
-    illustration: remindersIllustration,
+    illustration: searchReference,
     title: 'Tutorial jelas',
     detail: 'Lihat contoh sebelum mulai.',
   },
   {
-    illustration: shareResultsIllustration,
+    illustration: catetReference,
     title: 'Hasil tercatat',
     detail: 'Data sesi tersimpan otomatis.',
   },
   {
-    illustration: feelingHappyIllustration,
+    illustration: lompatReference,
     title: 'Tetap menyenangkan',
     detail: 'Latihan berlangsung tanpa hukuman.',
   },
@@ -215,13 +215,13 @@ export function LandingContent({
             </m.div>
 
             <m.img
-              alt="Dua orang melakukan latihan pagi bersama"
+              alt="Koala melakukan peregangan di atas matras"
               data-gsap-hero-art
               animate="visible"
               initial={hidden}
               className="mx-auto max-h-[30rem] w-full object-contain"
               fetchPriority="high"
-              src={heroMorningWorkoutIllustration}
+              src={stretchingReference}
               transition={{ delay: reduceMotion ? 0 : 0.12 }}
               variants={REVEAL}
             />
@@ -337,10 +337,10 @@ export function LandingContent({
             whileInView="visible"
           >
             <img
-              alt="Pendamping dan peserta mengikuti latihan bersama"
+              alt="Koala memegang papan catatan"
               className="mx-auto max-h-[30rem] w-full object-contain"
               loading="lazy"
-              src={workingTogetherIllustration}
+              src={papanReference}
             />
 
             <div>

@@ -6,26 +6,16 @@ export {
   satelliteAntennaEmoji,
   tangerineEmoji,
 } from './icons/index.ts';
-export {
-  athletesTrainingIllustration,
-  contactUsIllustration,
-  faqIllustration,
-  feelingHappyIllustration,
-  heroMorningWorkoutIllustration,
-  mindfulnessIllustration,
-  remindersIllustration,
-  retroVideoGameIllustration,
-  roadToKnowledgeIllustration,
-  shareResultsIllustration,
-  workingTogetherIllustration,
-} from './illustrations/index.ts';
 export { healthcareTeamPhoto, seniorExercisePhoto } from './photos/index.ts';
 export {
   arkaReferenceLogo,
   arkoKoala,
+  catetReference,
   dingDongReference,
   goNoGoReference,
   hiKoala,
+  kontakReference,
+  lompatReference,
   papanReference,
   perasJerukReference,
   perasJerukStepFour,
@@ -33,4 +23,5 @@ export {
   perasJerukStepThree,
   perasJerukStepTwo,
   searchReference,
+  stretchingReference,
 } from './arka/index.ts';

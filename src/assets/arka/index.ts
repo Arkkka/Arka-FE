@@ -1,8 +1,11 @@
 export { default as arkaReferenceLogo } from './arka_no_bg.png';
 export { default as arkoKoala } from './arko.png';
+export { default as catetReference } from './catet.png';
 export { default as dingDongReference } from './dingdong.png';
 export { default as goNoGoReference } from './gonogo.png';
 export { default as hiKoala } from './hi.png';
+export { default as kontakReference } from './kontak.png';
+export { default as lompatReference } from './lompat.png';
 export { default as papanReference } from './papan.png';
 export { default as perasJerukReference } from './perasjeruk.png';
 export { default as perasJerukStepOne } from './perasjeruk_1.png';
@@ -10,3 +13,4 @@ export { default as perasJerukStepTwo } from './perasjeruk2.png';
 export { default as perasJerukStepThree } from './perasjeruk3.png';
 export { default as perasJerukStepFour } from './perasjeruk4.png';
 export { default as searchReference } from './search.png';
+export { default as stretchingReference } from './stretching.png';

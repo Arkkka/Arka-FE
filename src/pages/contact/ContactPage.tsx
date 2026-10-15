@@ -2,8 +2,8 @@ import { m, useReducedMotion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import {
   clipboardEmoji,
-  contactUsIllustration,
   heartHandsEmoji,
+  kontakReference,
   satelliteAntennaEmoji,
 } from '@/assets/index.ts';
 import { buttonClassName } from '@/components/index.ts';
@@ -53,7 +53,7 @@ export function ContactPage() {
             animate={{ opacity: 1, y: 0 }}
             className="mx-auto max-h-[27rem] w-full object-contain"
             initial={initial}
-            src={contactUsIllustration}
+            src={kontakReference}
             transition={{ duration: 0.45 }}
           />
           <m.div

@@ -2,7 +2,7 @@ import { m, useReducedMotion } from 'framer-motion';
 import {
   clipboardEmoji,
   heartHandsEmoji,
-  roadToKnowledgeIllustration,
+  stretchingReference,
   tangerineEmoji,
 } from '@/assets/index.ts';
 
@@ -43,11 +43,11 @@ export function MissionPage() {
             </p>
           </m.div>
           <m.img
-            alt="Perjalanan menuju pengetahuan dan kemajuan"
+            alt="Koala melakukan peregangan"
             animate={{ opacity: 1, y: 0 }}
             className="mx-auto max-h-[27rem] w-full object-contain"
             initial={initial}
-            src={roadToKnowledgeIllustration}
+            src={stretchingReference}
             transition={{ delay: reduceMotion ? 0 : 0.1, duration: 0.45 }}
           />
         </div>
