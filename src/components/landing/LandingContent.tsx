@@ -6,19 +6,19 @@ import { ArrowRight } from 'lucide-react';
 import { useRef } from 'react';
 import { Link } from 'react-router-dom';
 import {
-  athletesTrainingIllustration,
   clipboardEmoji,
+  dingDongReference,
   eyesEmoji,
   feelingHappyIllustration,
   heartHandsEmoji,
   heroMorningWorkoutIllustration,
-  mindfulnessIllustration,
   musicalNotesEmoji,
   remindersIllustration,
-  retroVideoGameIllustration,
   satelliteAntennaEmoji,
   shareResultsIllustration,
   tangerineEmoji,
+  goNoGoReference,
+  perasJerukReference,
   workingTogetherIllustration,
 } from '@/assets/index.ts';
 import { ROUTES } from '@/constants/routes.ts';
@@ -49,19 +49,19 @@ const BENEFITS = [
 const GAMES = [
   {
     emoji: tangerineEmoji,
-    illustration: athletesTrainingIllustration,
+    illustration: perasJerukReference,
     title: 'Peras Jeruk',
     detail: 'Genggam alat dan tahan dengan nyaman.',
   },
   {
     emoji: eyesEmoji,
-    illustration: mindfulnessIllustration,
+    illustration: goNoGoReference,
     title: 'Go-No-Go',
     detail: 'Genggam saat gambar Wayang muncul.',
   },
   {
     emoji: musicalNotesEmoji,
-    illustration: retroVideoGameIllustration,
+    illustration: dingDongReference,
     title: 'Ding Dong Dong',
     detail: 'Ingat lalu ikuti urutan empat tombol.',
   },
@@ -179,7 +179,7 @@ export function LandingContent({
         <section className="relative isolate overflow-hidden bg-white" data-gsap-hero>
           <div
             aria-hidden
-            className="landing-glow landing-glow-yellow -top-24 -left-24 size-96"
+            className="landing-glow landing-glow-brand -top-24 -left-24 size-96"
             data-gsap-float
           />
           <div
@@ -326,7 +326,7 @@ export function LandingContent({
         >
           <div
             aria-hidden
-            className="landing-glow landing-glow-yellow -right-28 bottom-0 size-96"
+            className="landing-glow landing-glow-brand -right-28 bottom-0 size-96"
             data-gsap-float
           />
           <m.div

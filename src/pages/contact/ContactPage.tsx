@@ -46,7 +46,7 @@ export function ContactPage() {
   return (
     <>
       <section className="relative isolate overflow-hidden px-5 py-14 sm:px-8 lg:py-20">
-        <div aria-hidden className="landing-glow landing-glow-yellow -right-20 top-0 size-96" />
+        <div aria-hidden className="landing-glow landing-glow-brand -right-20 top-0 size-96" />
         <div className="relative z-10 mx-auto grid w-full max-w-[72rem] items-center gap-12 lg:grid-cols-2">
           <m.img
             alt="Seseorang menghubungi layanan bantuan"

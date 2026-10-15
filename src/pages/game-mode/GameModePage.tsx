@@ -19,7 +19,7 @@ export function GameModePage() {
   return (
     <div className={`relative min-h-dvh bg-white text-ink ${stage === 'result' ? 'overflow-x-hidden' : 'overflow-hidden'}`}>
       {(stage === 'participant' || stage === 'setup') && <div aria-hidden className="landing-glow landing-glow-soft -top-36 -right-40 size-[34rem]" />}
-      {stage === 'setup' && <div aria-hidden className="landing-glow landing-glow-yellow -bottom-48 -left-52 size-[36rem] opacity-45" />}
+      {stage === 'setup' && <div aria-hidden className="landing-glow landing-glow-brand -bottom-48 -left-52 size-[36rem] opacity-45" />}
       {!immersive && <a className="skip-link" href="#game-mode-main">Lewati ke konten utama</a>}
       {!immersive && <AccountHeader isSigningOut={signOut.isPending} onSignOut={() => session.data && signOut.mutate(session.data)} user={session.data} />}
       <main className={viewportStage ? 'relative h-dvh w-full overflow-hidden px-4 py-3 outline-none sm:px-8 lg:px-12' : immersive ? 'relative min-h-dvh w-full px-4 py-5 outline-none sm:px-8 lg:px-12' : 'relative mx-auto w-full max-w-[78rem] px-4 py-8 outline-none sm:px-6 lg:px-8 lg:py-12'} id="game-mode-main" tabIndex={-1}>
